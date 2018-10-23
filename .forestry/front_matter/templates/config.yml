@@ -26,7 +26,7 @@ fields:
           schema:
             format: markdown
       - type: field_group_list
-        name: Actions
+        name: actions
         label: Header Actions
         description: The action buttons displayed in the page header
         config:
@@ -66,7 +66,7 @@ fields:
     fields:
       - type: field_group_list
         name: social_icons
-        label: Social Media List
+        label: Social Media Icons
         config:
           labelField: title
         fields:
@@ -82,7 +82,7 @@ fields:
           - type: text
             name: url
             label: Icon URL
-  - type: text
-    name: copyright
-    label: Footer Copyright
-    description: The copyright text displayed in the page footer.
+      - type: text
+        name: copyright
+        label: Footer Copyright
+        description: The copyright text displayed in the page footer.
