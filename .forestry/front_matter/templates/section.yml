@@ -1,0 +1,20 @@
+---
+label: Section
+is_partial: true
+fields:
+  - type: text
+    name: section_id
+    label: Section ID
+    config:
+      required: true
+  - type: text
+    name: identifier
+    label: Section Label
+    description: How the section is displayed in lists
+    config:
+      required: true
+  - type: text
+    name: component
+    hidden: true
+    config:
+      required: true

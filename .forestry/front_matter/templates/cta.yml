@@ -1,0 +1,59 @@
+---
+label: CTA Section
+is_partial: true
+fields:
+  - type: text
+    name: section_id
+    label: Section ID
+    default: three
+    config:
+      required: true
+  - type: text
+    name: identifier
+    label: Section Label
+    description: How the section is displayed in lists
+    default: cta
+    config:
+      required: true
+  - type: text
+    name: component
+    hidden: true
+    default: cta.html
+    config:
+      required: true
+  - type: text
+    name: title
+    label: Section Title
+    config:
+      required: true
+  - type: textarea
+    name: subtitle
+    label: Section Subtitle
+    description: The text displayed below the section title
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  - type: select
+    name: background_style
+    label: Background Style
+    description: The color style for the background
+    config:
+      required: true
+      source:
+        type: custom
+      options:
+        - style1
+        - style2
+        - style3
+        - style4
+  - type: field_group_list
+    name: actions
+    label: CTA Action Buttons
+    config:
+      labelField: label
+    fields:
+      - type: include
+        name: include_action
+        label: Include action
+        template: action

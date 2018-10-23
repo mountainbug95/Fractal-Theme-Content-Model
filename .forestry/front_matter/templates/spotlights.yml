@@ -1,0 +1,56 @@
+---
+label: Spotlights Section
+is_partial: true
+fields:
+  - type: text
+    name: section_id
+    label: Section ID
+    default: two
+    config:
+      required: true
+  - type: text
+    name: identifier
+    label: Section Label
+    description: How the section is displayed in lists
+    default: spotlights
+    config:
+      required: true
+  - type: text
+    name: component
+    hidden: true
+    default: spotlights.html
+    config:
+      required: true
+  - type: field_group_list
+    name: spotlights
+    label: Spotlights List
+    config:
+      labelField: title
+    fields:
+      - type: text
+        name: title
+        label: Spotlight Title
+        config:
+          required: true
+      - type: textarea
+        name: text
+        label: Spotlight Text
+        description: The text displayed below the spotlight title
+        config:
+          wysiwyg: true
+          schema:
+            format: markdown
+      - type: file
+        name: image
+        label: Spotlight Image
+  - type: field_group_list
+    name: icons
+    label: Icons
+    description: Icons displayed at the bottom of the section
+    config:
+      labelField: title
+    fields:
+      - type: include
+        name: include_icon
+        label: Include icon
+        template: icon

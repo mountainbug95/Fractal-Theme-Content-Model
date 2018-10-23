@@ -1,0 +1,52 @@
+---
+label: Icons Section
+is_partial: true
+fields:
+  - type: text
+    name: section_id
+    label: Section ID
+    default: one
+    config:
+      required: true
+  - type: text
+    name: identifier
+    label: Section Label
+    description: How the section is displayed in lists
+    default: icons
+    config:
+      required: true
+  - type: text
+    name: component
+    hidden: true
+    default: icons.html
+    config:
+      required: true
+  - type: textarea
+    name: title
+    label: Section Title
+    config:
+      required: true
+  - type: select
+    name: background_style
+    label: Background Style
+    description: The color style for the background
+    config:
+      required: true
+      source:
+        type: custom
+      options:
+        - style1
+        - style2
+        - style3
+        - style4
+  - type: field_group_list
+    name: icons
+    label: Icons
+    description: Icons displayed at the bottom of the section
+    config:
+      labelField: title
+    fields:
+      - type: include
+        name: include_icon
+        label: Include icon
+        template: icon
