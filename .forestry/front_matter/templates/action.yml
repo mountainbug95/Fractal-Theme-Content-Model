@@ -13,7 +13,7 @@ fields:
     name: url
     label: Button URL
   - type: boolean
-    name: is_Primary
+    name: is_primary
     label: Is Primary
     description: Gives the button a primary color scheme
     default: false
