@@ -23,7 +23,7 @@ fields:
       required: true
   - type: field_group_list
     name: spotlights
-    label: Spotlights List
+    label: Spotlights Sections
     config:
       labelField: title
     fields:
