@@ -53,6 +53,6 @@ fields:
       labelField: title
     fields:
       - type: include
-        name: include_icon
-        label: Include icon
-        template: icon
+        name: include_icon_labeled
+        label: Include icon_labeled
+        template: icon_labeled
