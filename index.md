@@ -37,15 +37,15 @@ sections:
           convallis amet leo non sapien iaculis efficitur consequat lorem ipsum.
         image: images/pic03.jpg
     icons:
-      - label: Ipsum lorem accumsan
+      - title: Ipsum lorem accumsan
         icon: fa-camera-retro
-      - label: Sed vehicula elementum
+      - title: Sed vehicula elementum
         icon: fa-refresh
-      - label: Elit fusce consequat
+      - title: Elit fusce consequat
         icon: fa-cloud
-      - label: Lorem nullam tempus
+      - title: Lorem nullam tempus
         icon: fa-code
-      - label: Adipiscing amet sapien
+      - title: Adipiscing amet sapien
         icon: fa-desktop
     identifier: spotlights
     component: spotlights.html

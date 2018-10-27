@@ -50,9 +50,9 @@ fields:
     label: Icons
     description: Icons displayed at the bottom of the section
     config:
-      labelField: label
+      labelField: title
     fields:
       - type: include
-        name: include_icon_labeled
-        label: Include icon_labeled
-        template: icon_labeled
+        name: include_icon
+        label: Include icon
+        template: icon
