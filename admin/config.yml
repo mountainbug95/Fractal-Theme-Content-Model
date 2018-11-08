@@ -1,0 +1,328 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: uploads
+public_folder: /uploads
+collections:
+  - name: config
+    label: Config
+    files:
+      - name: config
+        label: Config
+        file: _config.yml
+        fields:
+          - name: title
+            label: Title
+            widget: text
+            required: true
+          - name: header
+            widget: object
+            required: false
+            label: Header Configuration
+            fields:
+              - name: title_url
+                widget: string
+                required: false
+                label: Title URL
+                hint: The link used in the page title
+              - name: subtitle
+                widget: markdown
+                required: false
+                label: Header Subtitle
+                hint: The text displayed below the page title
+              - name: actions
+                widget: list
+                required: false
+                label: Header Actions
+                hint: The action buttons displayed in the page header
+                fields:
+                  - name: label
+                    widget: string
+                    required: false
+                    label: Button Label
+                  - name: icon
+                    widget: string
+                    required: false
+                    label: Button Icon
+                    hint: Font Awesome Icon
+                  - name: url
+                    widget: string
+                    required: false
+                    label: Button URL
+                  - name: is_primary
+                    widget: boolean
+                    required: false
+                    label: Is Primary
+                    default: false
+                    hint: Gives the button a primary color scheme
+                  - name: is_scrolly
+                    widget: boolean
+                    required: false
+                    label: Is Scrolly
+                    default: false
+                    hint: >-
+                      adds a scroll animation (enable if button URL is set to a
+                      section ID)
+              - name: img
+                widget: object
+                required: false
+                label: Header Image
+                fields:
+                  - name: path
+                    widget: image
+                    required: false
+                    label: Image
+                  - name: phone_border
+                    widget: boolean
+                    required: false
+                    label: Header Image Phone Border
+                    default: false
+                    hint: Puts a phone border around the header image
+          - name: palette
+            widget: select
+            required: true
+            label: Color Palette
+            hint: The color palette used in the theme
+            options:
+              - blue
+              - magenta
+              - purple
+          - name: footer
+            widget: object
+            required: false
+            label: Footer Configuration
+            fields:
+              - name: social_icons
+                widget: list
+                required: false
+                label: Social Media Icons
+                fields:
+                  - name: title
+                    widget: string
+                    required: true
+                    label: Icon Title
+                  - name: icon
+                    widget: string
+                    required: false
+                    label: Icon
+                    hint: Font Awesome Icon
+                  - name: url
+                    widget: string
+                    required: false
+                    label: Icon URL
+              - name: copyright
+                widget: string
+                required: false
+                label: Footer Copyright
+                hint: The copyright text displayed in the page footer.
+          - name: palettes
+            widget: hidden
+            required: false
+  - name: home
+    label: Home
+    files:
+      - name: home
+        label: Home
+        file: index.md
+        fields:
+          - name: title
+            widget: string
+            required: false
+            label: Page Title
+          - name: sections
+            widget: list
+            required: false
+            label: Sections
+            hint: Home sections
+            types:
+              - name: icons
+                widget: object
+                label: Icons Section
+                fields:
+                  - name: section_id
+                    widget: string
+                    required: true
+                    label: Section ID
+                    default: one
+                  - name: identifier
+                    widget: string
+                    required: true
+                    label: Section Label
+                    default: icons
+                    hint: How the section is displayed in lists
+                  - name: component
+                    widget: hidden
+                    required: true
+                    default: icons.html
+                  - name: title
+                    widget: text
+                    required: true
+                    label: Section Title
+                  - name: background_style
+                    widget: select
+                    required: true
+                    label: Background Style
+                    hint: The color style for the background
+                    options:
+                      - style1
+                      - style2
+                      - style3
+                      - style4
+                  - name: icons
+                    widget: list
+                    required: false
+                    label: Icons
+                    hint: Icons displayed at the bottom of the section
+                    fields:
+                      - name: title
+                        widget: string
+                        required: false
+                        label: Icon Title
+                      - name: icon
+                        widget: string
+                        required: false
+                        label: Icon
+                        hint: Font Awesome Icon
+              - name: spotlights
+                widget: object
+                label: Spotlights Section
+                fields:
+                  - name: section_id
+                    widget: string
+                    required: true
+                    label: Section ID
+                    default: two
+                  - name: identifier
+                    widget: string
+                    required: true
+                    label: Section Label
+                    default: spotlights
+                    hint: How the section is displayed in lists
+                  - name: component
+                    widget: hidden
+                    required: true
+                    default: spotlights.html
+                  - name: spotlights
+                    widget: list
+                    required: false
+                    label: Spotlight Sections
+                    fields:
+                      - name: title
+                        widget: string
+                        required: true
+                        label: Spotlight Title
+                      - name: text
+                        widget: markdown
+                        required: false
+                        label: Spotlight Text
+                        hint: The text displayed below the spotlight title
+                      - name: image
+                        widget: image
+                        required: false
+                        label: Spotlight Image
+                  - name: icons
+                    widget: list
+                    required: false
+                    label: Icons
+                    hint: Icons displayed at the bottom of the section
+                    fields:
+                      - name: title
+                        widget: string
+                        required: false
+                        label: Icon Title
+                      - name: icon
+                        widget: string
+                        required: false
+                        label: Icon
+                        hint: Font Awesome Icon
+              - name: cta
+                widget: object
+                label: CTA Section
+                fields:
+                  - name: section_id
+                    widget: string
+                    required: true
+                    label: Section ID
+                    default: three
+                  - name: identifier
+                    widget: string
+                    required: true
+                    label: Section Label
+                    default: cta
+                    hint: How the section is displayed in lists
+                  - name: component
+                    widget: hidden
+                    required: true
+                    default: cta.html
+                  - name: title
+                    widget: string
+                    required: true
+                    label: Section Title
+                  - name: subtitle
+                    widget: markdown
+                    required: false
+                    label: Section Subtitle
+                    hint: The text displayed below the section title
+                  - name: background_style
+                    widget: select
+                    required: true
+                    label: Background Style
+                    hint: The color style for the background
+                    options:
+                      - style1
+                      - style2
+                      - style3
+                      - style4
+                  - name: actions
+                    widget: list
+                    required: false
+                    label: CTA Action Buttons
+                    fields:
+                      - name: label
+                        widget: string
+                        required: false
+                        label: Button Label
+                      - name: icon
+                        widget: string
+                        required: false
+                        label: Button Icon
+                        hint: Font Awesome Icon
+                      - name: url
+                        widget: string
+                        required: false
+                        label: Button URL
+                      - name: is_primary
+                        widget: boolean
+                        required: false
+                        label: Is Primary
+                        default: false
+                        hint: Gives the button a primary color scheme
+                      - name: is_scrolly
+                        widget: boolean
+                        required: false
+                        label: Is Scrolly
+                        default: false
+                        hint: >-
+                          adds a scroll animation (enable if button URL is set
+                          to a section ID)
+          - name: layout
+            widget: hidden
+            required: true
+            label: Layout
+            default: home
+  - name: elements
+    label: Elements
+    files:
+      - name: elements
+        label: Elements
+        file: elements.md
+        fields:
+          - name: title
+            widget: string
+            required: true
+            label: Page Title
+          - name: layout
+            widget: hidden
+            required: true
+            label: Layout
+            default: elements
