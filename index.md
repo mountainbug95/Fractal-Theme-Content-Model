@@ -15,7 +15,7 @@ sections:
         icon: fa-cloud
     identifier: icons
     component: icons.html
-    widget: icons
+    template: icons
   - section_id: two
     spotlights:
       - title: Magna sed ultrices
@@ -49,7 +49,7 @@ sections:
         icon: fa-desktop
     identifier: spotlights
     component: spotlights.html
-    widget: spotlights
+    template: spotlights
   - title: Magna leo sapien gravida
     subtitle: |-
       Gravida at leo elementum elit fusce accumsan dui libero, quis vehicula  
@@ -69,6 +69,6 @@ sections:
         icon: null
     identifier: cta
     component: cta.html
-    widget: cta
+    template: cta
 layout: home
 ---
