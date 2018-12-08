@@ -88,29 +88,30 @@ fields:
         description: The copyright text displayed in the page footer.
   - type: field_group
     name: palettes
+    label: Palettes
     hidden: true
     fields:
       - type: field_group
         name: blue
+        label: Blue
         fields:
-          - type: field_group
-            name: sass
-            fields:
-              - type: text
-                name: color
+          - type: include
+            name: include_palette
+            label: Palette
+            template: palette
       - type: field_group
         name: magenta
+        label: Magenta
         fields:
-          - type: field_group
-            name: sass
-            fields:
-              - type: text
-                name: color
+          - type: include
+            name: include_palette
+            label: Palette
+            template: palette
       - type: field_group
         name: purple
+        label: Purple
         fields:
-          - type: field_group
-            name: sass
-            fields:
-              - type: text
-                name: color
+          - type: include
+            name: include_palette
+            label: Palette
+            template: palette
