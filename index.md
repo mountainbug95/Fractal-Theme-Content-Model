@@ -15,7 +15,8 @@ sections:
         icon: fa-cloud
     component: icons.html
     template: icons
-  - section_id: two
+  - title: Spotlights Section
+    section_id: two
     spotlights:
       - title: Magna sed ultrices
         text: >-
