@@ -13,7 +13,6 @@ sections:
         icon: fa-refresh
       - title: Upload
         icon: fa-cloud
-    identifier: icons
     component: icons.html
     template: icons
   - section_id: two
@@ -47,7 +46,6 @@ sections:
         icon: fa-code
       - title: Adipiscing amet sapien
         icon: fa-desktop
-    identifier: spotlights
     component: spotlights.html
     template: spotlights
   - title: Magna leo sapien gravida
@@ -67,7 +65,6 @@ sections:
         is_primary: false
         is_scrolly: false
         icon: null
-    identifier: cta
     component: cta.html
     template: cta
 layout: home
